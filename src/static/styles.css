@@ -198,3 +198,204 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+/* User authentication UI styles */
+.user-panel {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 100;
+}
+
+.user-icon {
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.user-icon:hover {
+  background-color: #3949ab;
+  transform: scale(1.1);
+}
+
+.user-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 101;
+}
+
+.menu-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.menu-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.menu-btn:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.menu-btn:last-of-type {
+  border-radius: 0 0 5px 5px;
+}
+
+.user-name {
+  display: block;
+  padding: 12px 16px;
+  color: #666;
+  font-size: 12px;
+  border-top: 1px solid #eee;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  color: #1a237e;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#login-form .form-group {
+  margin-bottom: 15px;
+}
+
+#login-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+#login-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#login-form input:focus {
+  outline: none;
+  border-color: #1a237e;
+  box-shadow: 0 0 5px rgba(26, 35, 126, 0.3);
+}
+
+.btn-primary {
+  background-color: #1a237e;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #3949ab;
+}
+
+#login-error {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  border: 1px solid #ef9a9a;
+}
+
+/* Disable delete button when not authenticated */
+.delete-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .user-panel {
+    top: 10px;
+    right: 10px;
+  }
+
+  .user-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .modal-content {
+    max-width: 100%;
+    width: 95%;
+  }
+}
